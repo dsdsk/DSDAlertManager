@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DSDAlertManager_Example' do
+  pod 'DSDAlertManager', :path => '../'
+
+  target 'DSDAlertManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

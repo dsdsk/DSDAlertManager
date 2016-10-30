@@ -1,0 +1,16 @@
+PODS:
+  - DSDAlertManager (1.0.0)
+
+DEPENDENCIES:
+  - DSDAlertManager (from `../`)
+
+EXTERNAL SOURCES:
+  DSDAlertManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DSDAlertManager: 1dc4a2ddeeadd448105e2190395670fe72da72ba
+
+PODFILE CHECKSUM: f50594cf0f050f4ab0c66f0730a7558fe8f82922
+
+COCOAPODS: 1.1.1
