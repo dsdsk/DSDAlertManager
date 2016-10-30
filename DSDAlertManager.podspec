@@ -30,7 +30,7 @@ Is the manager to open the UIAlertController easily.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'DSDAlertManager/Classes/*.{h, m}'
+  s.source_files = 'DSDAlertManager/Classes/*.{h,m}'
   
   # s.resource_bundles = {
   #   'DSDAlertManager' => ['DSDAlertManager/Assets/*.png']
