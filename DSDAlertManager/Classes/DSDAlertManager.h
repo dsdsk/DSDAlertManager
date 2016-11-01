@@ -64,7 +64,7 @@
  *  @param ok      OKボタン押下時の処理ブロック
  *  @param cancel  キャンセルボタン押下時の処理ブロック
  */
-+ (void)showEditAlert:(UIViewController *)parent title:(NSString *)title message:(NSString *)message value:(NSString *)value ok:(void (^)(NSString *))ok cancel:(void (^)(void))cancel;
++ (void)showEditAlert:(UIViewController *)parent title:(NSString *)title message:(NSString *)message value:(NSString *)value ok:(void (^)(NSString *value))ok cancel:(void (^)(void))cancel;
 
 /**
  *  ダイアログを閉じる
