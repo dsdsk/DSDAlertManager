@@ -59,7 +59,7 @@ static void (^_okValueBlock)(NSString *inputValue);
     [self showAlertCustomLabelYesAndNo:parent title:title message:message yesLabel:yesLabel noLabel:noLabel];
 }
 
-+ (void)showEditAlert:(UIViewController *)parent title:(NSString *)title message:(NSString *)message value:(NSString *)value ok:(void (^)(NSString *))ok cancel:(void (^)(void))cancel
++ (void)showEditAlert:(UIViewController *)parent title:(NSString *)title message:(NSString *)message value:(NSString *)value ok:(void (^)(NSString *value))ok cancel:(void (^)(void))cancel
 {
     _okValueBlock = ok;
     _cancelBlock = cancel;
