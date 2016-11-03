@@ -1,6 +1,0 @@
-framework module DSDAlertManager {
-  umbrella header "DSDAlertManager-umbrella.h"
-
-  export *
-  module * { export * }
-}
