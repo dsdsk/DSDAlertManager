@@ -66,6 +66,9 @@
                      [CellData instanceWithName:@"OK" value:@"" block:^{
                          [weakSelf okOnly];
                      }],
+                     [CellData instanceWithName:@"CustomLabel OK" value:@"" block:^{
+                         [weakSelf customLabelOkOnly];
+                     }],
                      [CellData instanceWithName:@"OK & Cancel" value:@"" block:^{
                          [weakSelf okCancel];
                      }],
@@ -91,6 +94,20 @@
     [DSDAlertManager showAlert:self
                          title:@"title"
                        message:@"message"
+                            ok:^{
+                                NSLog(@"OK tap!");
+                            }];
+}
+
+/**
+ カスタムラベルOKのみのダイアログ表示
+ */
+- (void)customLabelOkOnly
+{
+    [DSDAlertManager showAlert:self
+                         title:@"title"
+                       message:@"message"
+                       okLabel:@"CustomOK"
                             ok:^{
                                 NSLog(@"OK tap!");
                             }];
