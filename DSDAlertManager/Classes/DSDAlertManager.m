@@ -35,6 +35,13 @@ static void (^_okValueBlock)(NSString *inputValue);
     [self showAlertOkOnly:parent title:title message:message];
 }
 
++ (void)showAlert:(UIViewController *)parent title:(NSString *)title message:(NSString *)message okLabel:(NSString *)okLabel ok:(void (^)(void))ok
+{
+    _okBlock = ok;
+    
+    [self showAlertCustomLabelOkOnly:parent title:title message:message okLabel:okLabel];
+}
+
 + (void)showAlert:(UIViewController *)parent title:(NSString *)title message:(NSString *)message ok:(void (^)(void))ok cancel:(void (^)(void))cancel
 {
     _okBlock = ok;
@@ -84,6 +91,20 @@ static void (^_okValueBlock)(NSString *inputValue);
                                                     preferredStyle:UIAlertControllerStyleAlert];
     
     [_alertController addAction:[UIAlertAction actionWithTitle:ALERT_BUTTON_OK style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        // okボタンが押された時の処理
+        [self okButtonPushed];
+    }]];
+    
+    [parent presentViewController:_alertController animated:YES completion:nil];
+}
+
++ (void)showAlertCustomLabelOkOnly:(UIViewController *)parent title:(NSString *)title message:(NSString *)message okLabel:(NSString *)okLabel
+{
+    _alertController = [UIAlertController alertControllerWithTitle:title
+                                                           message:message
+                                                    preferredStyle:UIAlertControllerStyleAlert];
+    
+    [_alertController addAction:[UIAlertAction actionWithTitle:okLabel style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         // okボタンが押された時の処理
         [self okButtonPushed];
     }]];
