@@ -38,6 +38,18 @@ pod "DSDAlertManager"
                         }];
 ```
 
+### OK button only (Customize button label)
+
+```
+[DSDAlertManager showAlert:self
+                     title:@"title"
+                   message:@"message"
+                   okLabel:@"CustomOK"
+                        ok:^{
+                            NSLog(@"OK tap!");
+                        }];
+```
+
 ### OK and Cancel buttons
 
 ```
